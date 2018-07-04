@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = LinkScraper::VERSION
   spec.authors       = ["Adam Booth"]
   spec.email         = ["4rlm@protonmail.ch"]
-  spec.homepage      = 'https://github.com/4rlm/scrub_db'
+  spec.homepage      = 'https://github.com/4rlm/link_scraper'
   spec.license       = "MIT"
 
   spec.summary       = %q{Scrape website links' text and path with built-in scrubbing filter.}
