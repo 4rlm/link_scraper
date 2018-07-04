@@ -1,3 +1,3 @@
 module LinkScraper
-  VERSION = "1.01"
+  VERSION = "1.02"
 end

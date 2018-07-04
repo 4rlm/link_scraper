@@ -26,7 +26,53 @@ Or install it yourself as:
 
 ## Usage
 
-### COMING SOON - GEM IS CURRENTLY BEING DEVELOPED.
+This is an example of how to grab links from a URL.  `args` are optional if you want to scrub and filter the links based on your criteria, like below.
+
+```
+text_criteria = {
+  pos_criteria: ['coordinates', 'zip codes', 'area codes', 'climate', 'demographics'],
+  neg_criteria: %w[drought school]
+}
+
+path_criteria = {
+  pos_criteria: ['coordinates', 'zip codes', 'area codes', 'climate', 'demographics'],
+  neg_criteria: %w[drought school]
+}
+
+scraper = LinkScraper::Scrape.new(text_criteria: text_criteria, path_criteria: path_criteria)
+scraped_links = scraper.start('https://en.wikipedia.org/wiki/Austin%2C_Texas')
+```
+
+Example without Criteria (returns all links)
+
+```
+scraper = LinkScraper::Scrape.new
+scraped_links = scraper.start('https://en.wikipedia.org/wiki/Austin%2C_Texas')
+```
+
+Returns Array of Links Based on Criteria in `args`:
+
+```
+[
+  {:text=>"coordinates", :path=>"/wiki/geographic_coordinate_system"},
+  {:text=>"2.2 climate", :path=>""},
+  {:text=>"3 demographics", :path=>""},
+  {:text=>"explanation", :path=>"/wiki/template:climate_chart/how_to_read_a_climate_chart"},
+  {:text=>"humid subtropical climate", :path=>"/wiki/humid_subtropical_climate"},
+  {:text=>"kppen climate classification", :path=>"/wiki/k%c3%b6ppen_climate_classification"},
+  {:text=>"climate", :path=>""},
+  {:text=>"austin climate summary", :path=>"/web/20110606123855/http://www.srh.noaa.gov/images/ewx/aus/ausclisum.pdf"},
+  {:text=>"u.s. climate data", :path=>""},
+  {:text=>"nowdata - noaa online weather data", :path=>"/climate/xmacis.php"},
+  {:text=>"austin weather & climate", :path=>"/web/20070118231257/http://austin.about.com/od/weatherenvironment/a/weather.htm"},
+  {:text=>"nowdata - noaa online weather data", :path=>"/climate/xmacis.php"},
+  {:text=>"wmo climate normals for austin/municipal ap tx 19611990", :path=>"pub/gcos/wmo-normals/tables/reg_iv/us/group3/72254.txt"},
+  {:text=>"climate", :path=>"/wiki/climate_of_texas"},
+  {:text=>"demographics", :path=>"/wiki/demographics_of_texas"},
+  {:text=>"coordinates on wikidata", :path=>"/wiki/category:coordinates_on_wikidata"}
+ ]
+
+```
 
 ## Development
 
