@@ -26,24 +26,23 @@ end
 
 def run_link_scraper
   urls = %w[
-    austinchevrolet.not.real
-    smith_acura.com/staff
-    abcrepair.ca
-    hertzrentals.com/review
-    londonhyundai.uk/fleet
-    http://www.townbuick.net/staff
-    http://youtube.com/download
-    www.madridinfiniti.es/collision
-    www.mitsubishideals.sofake
-    www.dallassubaru.com.sofake
-    www.quickeats.net/contact_us
-    www.school.edu/teachers
-    www.www.nissancars/inventory
-    www.www.toyotatown.net/staff/management
-    www.www.yellowpages.com/business
+    https://www.baierltoyota.com
+    https://www.coleautomotive.com
+    https://www.fairwaymazda.com
+    https://www.olympianissan.com
+    https://www.pomocochryslerjeepdodge.com
+    https://www.hanseltoyota.com
+    https://www.onioncreekvw.com
+    https://www.jaguar.niello.com
+    http://www.palmspringsnissan.com
+    https://www.hebertstandc.com
   ]
 
+  # scraper_obj = LinkScraper::Scrape.new(WebsCriteria.all_scrub_web_criteria)
+
   binding.pry
-  scraper_obj = LinkScraper::Scrape.new(WebsCriteria.all_scrub_web_criteria)
-  scraped_links = scraper_obj.scrub_urls(urls)
+  args = {}
+  scraper_obj = LinkScraper::Scrape.new(args)
+  binding.pry
+  scraped_links = scraper_obj.start(urls.first)
 end
