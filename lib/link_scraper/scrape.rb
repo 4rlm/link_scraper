@@ -13,7 +13,10 @@ module LinkScraper
 
     def start(url)
       noko_hash = @noko.scrape({url: url})
+      binding.pry
       link_hashes = noko_hash[:texts_and_hrefs]
+      binding.pry
+      
       err_msg = noko_hash[:err_msg]
       page = noko_hash[:page]
       valid_links = scrub_link_hashes(link_hashes, url)

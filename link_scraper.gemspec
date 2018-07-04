@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '~> 2.5.1'
   spec.add_dependency 'activesupport', '~> 5.2'
   spec.add_dependency 'crm_formatter', '~> 2.64'
-  spec.add_dependency 'mechanizer', '~> 1.11'
+  spec.add_dependency 'mechanizer', '~> 1.12'
   spec.add_dependency 'scrub_db', '~> 2.23'
   spec.add_dependency 'url_verifier', '~> 2.12'
   spec.add_dependency 'utf8_sanitizer', '~> 2.16'
