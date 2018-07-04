@@ -18,31 +18,40 @@ task :console do
   ARGV.clear
 
   scraped_links = run_link_scraper
-  # binding.pry
+  binding.pry
 
   IRB.start
 end
 
 
 def run_link_scraper
-  urls = %w[
-    https://www.baierltoyota.com
-    https://www.coleautomotive.com
-    https://www.fairwaymazda.com
-    https://www.olympianissan.com
-    https://www.pomocochryslerjeepdodge.com
-    https://www.hanseltoyota.com
-    https://www.onioncreekvw.com
-    https://www.jaguar.niello.com
-    http://www.palmspringsnissan.com
-    https://www.hebertstandc.com
-  ]
 
-  # scraper_obj = LinkScraper::Scrape.new(WebsCriteria.all_scrub_web_criteria)
+  pos_texts = ["home", "team", "blog", "testimonials", "employment", "job", "contact us", "customer service", "staff"]
+  neg_texts = %w[facebook commercial twit click 404 google]
 
+  pos_paths = ["home", "team", "blog", "testimonials", "employment", "job", "contact us", "customer service", "staff"]
+  neg_paths = %w[facebook commercial twit click 404 google]
+
+  text_criteria = { pos_criteria: pos_texts, neg_criteria: neg_texts }
+  path_criteria = { pos_criteria: pos_paths, neg_criteria: neg_paths }
+  args = { text_criteria: text_criteria, path_criteria: path_criteria }
+  scraper = LinkScraper::Scrape.new(args)
+  scraped_links = scraper.start('https://www.baierltoyota.com')
   binding.pry
-  args = {}
-  scraper_obj = LinkScraper::Scrape.new(args)
-  binding.pry
-  scraped_links = scraper_obj.start(urls.first)
+
+
+  # urls = %w[
+  #   https://www.baierltoyota.com
+  #   https://www.coleautomotive.com
+  #   https://www.fairwaymazda.com
+  #   https://www.olympianissan.com
+  #   https://www.pomocochryslerjeepdodge.com
+  #   https://www.hanseltoyota.com
+  #   https://www.onioncreekvw.com
+  #   https://www.jaguar.niello.com
+  #   http://www.palmspringsnissan.com
+  #   https://www.hebertstandc.com
+  # ]
+
+  # scraper = LinkScraper::Scrape.new(WebsCriteria.all_scrub_web_criteria)
 end

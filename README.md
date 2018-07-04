@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/link_scraper.svg)](https://badge.fury.io/rb/link_scraper)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-#### Scrape website links' text and href with built-in scrubbing filter.  
+#### Scrape website links' text and path with built-in scrubbing filter.  
 
 Designed to rapidly visit and scrape links from list of several URLs, then filters them based on your criteria.  For example, to only grab the links for inventory, staff, or contact us, etc.
 

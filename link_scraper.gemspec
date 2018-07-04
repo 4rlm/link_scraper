@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/4rlm/scrub_db'
   spec.license       = "MIT"
 
-  spec.summary       = %q{Scrape website links' text and href with built-in scrubbing filter.}
-  spec.description   = %q{Scrape website links' text and href with built-in scrubbing filter.  Designed to rapidly visit and scrape links from list of several URLs, then filters them based on your criteria.  For example, to only grab the links for inventory, staff, or contact us, etc.}
+  spec.summary       = %q{Scrape website links' text and path with built-in scrubbing filter.}
+  spec.description   = %q{Scrape website links' text and path with built-in scrubbing filter.  Designed to rapidly visit and scrape links from list of several URLs, then filters them based on your criteria.  For example, to only grab the links for inventory, staff, or contact us, etc.}
 
 
   if spec.respond_to?(:metadata)
@@ -38,11 +38,11 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '~> 2.5.1'
   spec.add_dependency 'activesupport', '~> 5.2'
-  spec.add_dependency 'utf8_sanitizer', '~> 2.16'
-  spec.add_dependency 'crm_formatter', '~> 2.61'
+  spec.add_dependency 'crm_formatter', '~> 2.64'
   spec.add_dependency 'mechanizer', '~> 1.11'
-  spec.add_dependency 'scrub_db', '~> 2.22'
+  spec.add_dependency 'scrub_db', '~> 2.23'
   spec.add_dependency 'url_verifier', '~> 2.12'
+  spec.add_dependency 'utf8_sanitizer', '~> 2.16'
 
   # spec.add_dependency "activesupport-inflector", ['~> 0.1.0']
   spec.add_development_dependency 'bundler', '~> 1.16', '>= 1.16.2'
