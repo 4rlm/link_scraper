@@ -1,9 +1,7 @@
-RSpec.describe LinkScraper do
-  it "has a version number" do
-    expect(LinkScraper::VERSION).not_to be nil
-  end
+require 'link_scraper'
+require 'spec_helper'
+# require 'crm_formatter'
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+RSpec.describe LinkScraper do
+  # let(:obj) { LinkScraper }
 end

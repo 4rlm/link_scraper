@@ -22,7 +22,6 @@ module LinkScraper
 
     def extract_link_from_url(valid_links, url)
       formatted = valid_links.map do |link|
-
         begin
           link[:path] = URI(link[:path])&.path
         rescue StandardError => e

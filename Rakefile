@@ -18,7 +18,6 @@ task :console do
   ARGV.clear
 
   scraped_links = run_link_scraper
-  binding.pry
 
   IRB.start
 end
@@ -38,7 +37,6 @@ def run_link_scraper
 
   scraper = LinkScraper::Scrape.new({text_criteria: text_criteria, path_criteria: path_criteria})
   scraped_links = scraper.start('https://en.wikipedia.org/wiki/Austin%2C_Texas')
-  binding.pry
 
   # scraper = LinkScraper::Scrape.new(WebsCriteria.all_scrub_web_criteria)
 end
