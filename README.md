@@ -1,5 +1,6 @@
 # LinkScraper
 
+[![Build Status](https://travis-ci.org/4rlm/link_scraper.svg?branch=master)](https://travis-ci.org/4rlm/link_scraper)
 [![Gem Version](https://badge.fury.io/rb/link_scraper.svg)](https://badge.fury.io/rb/link_scraper)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
